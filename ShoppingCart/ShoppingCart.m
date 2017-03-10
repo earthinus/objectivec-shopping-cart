@@ -11,7 +11,6 @@
 @implementation ShoppingCart
 
 - (id) initWithItems:(NSMutableArray<Product*>*)items {
-    
     self = [super init];
     if (self) {
         self.items = items;
@@ -21,15 +20,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-
 
 - (void) addItem:(Product*)item {
     
@@ -38,29 +33,17 @@
     NSLog(@"\n\n");
 }
 
-
-
-- (void) calculate {
-    
-    float sum = 0;
-    for (Product *item in self.items) {
-        sum+= [item price];
-    }
-    
-    NSLog(@"Total: $%f\n", sum);
-    NSLog(@"\n\n");
+- (float) calculate:(Product*)item {
+    NSLog(@"Total: $%f\n", [item price]);
+    return [item price];
 }
 
-
-
 - (void) showItems {
-    
     NSLog(@"----- Item list -----");
     for (Product *item in self.items) {
         NSLog(@"%@\n", item.productName);
     }
     NSLog(@"\n\n");
 }
-
 
 @end

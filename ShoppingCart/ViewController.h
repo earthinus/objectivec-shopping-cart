@@ -10,15 +10,17 @@
 #import "FoodViewController.h"
 #import "DrinkViewController.h"
 #import "ClothViewController.h"
-#import "ShoppingCart.h"
+#import "Product.h"
 
 @interface ViewController : UIViewController <FoodDelegate, DrinkDelegate, ClothDelegate>
 
-@property ShoppingCart *items;
+@property NSMutableArray<Product*> *items;
 @property float sum;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
+- (void) addItem:(Product*)item;
+
+- (void) showSumPrice:(Product *)item;
 - (IBAction)showItems:(UIButton *)sender;
 
 @end
-

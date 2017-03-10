@@ -14,6 +14,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.items = [[NSMutableArray<Product*> alloc] init];
     self.sum = 0;
 }
 
@@ -35,23 +36,22 @@
 }
 
 - (void) foodView:(FoodViewController *)foodView item:(Food *)item {
-    
-    self.sum += item.productPrice;
-    
-    self.priceLabel.text = [@"$" stringByAppendingString:@(self.sum).stringValue];
+    [self.items addObject:item];
+    [self showSumPrice:item];
 }
 
 - (void) drinkView:(DrinkViewController *)drinkView item:(Drink *)item {
-    
-    self.sum += item.productPrice;
-    
-    self.priceLabel.text = [@"$" stringByAppendingString:@(self.sum).stringValue];
+    [self.items addObject:item];
+    [self showSumPrice:item];
 }
 
 - (void) clothView:(ClothViewController *)clothView item:(Cloth *)item {
-    
-    self.sum += item.productPrice;
-    
+    [self.items addObject:item];
+    [self showSumPrice:item];
+}
+
+- (void) showSumPrice:(Product *)item {
+    self.sum += [item price];
     self.priceLabel.text = [@"$" stringByAppendingString:@(self.sum).stringValue];
 }
 

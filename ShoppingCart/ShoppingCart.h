@@ -17,7 +17,7 @@
 
 - (void) addItem:(Product*)item;
 
-- (void) calculate;
+- (float) calculate:(Product*)item;
 
 - (void) showItems;
 
