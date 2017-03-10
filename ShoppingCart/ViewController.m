@@ -7,7 +7,6 @@
 //
 
 #import "ViewController.h"
-#import "itemList.h"
 
 @implementation ViewController
 
@@ -57,7 +56,11 @@
 
 - (IBAction)showItems:(UIButton *)sender {
     
-    [self performSegueWithIdentifier:@"showItems" sender:self];
+    if ([self.delegate respondsToSelector:@selector(items:)]) {
+        
+        // Delegate array of Product to itemViewController
+        [self.delegate items:self.items];
+    }
 }
 
 @end
