@@ -31,17 +31,34 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView
          cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    homeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeTableViewCellID"];
+    static NSString* cellIdentifier = @"homeTableViewCellID";
+    
+    homeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
-        cell = [[homeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"homeTableViewCellID"];
+        cell = [[homeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.homeTVCImageView.image = [self.dataSourceForImage objectAtIndex:indexPath.row];
     cell.homeTVCLabel.text = [self.dataSourceForLabel objectAtIndex:indexPath.row];
-    //cell.homeTVCButton.text = [self.dataSourceForButton objectAtIndex:indexPath.row];
+    
+    // Button
+    [cell.homeTVCButton addTarget:self action:@selector(onMyButtonTouch:event:)
+            forControlEvents:UIControlEventTouchUpInside];
+    
     
     return cell;
+}
+
+// Tap event for buttons
+- (void) onMyButtonTouch:(UIButton *)sendar event:(UIEvent *)event{
+    
+    // Get the index of the tapped button
+    UITouch *touch = [[event allTouches] anyObject];
+    CGPoint point = [touch locationInView:_homeTableView];
+    NSIndexPath *indexPath = [_homeTableView indexPathForRowAtPoint:point];
+    
+    NSLog(@"%ld\n", (long)indexPath.row);
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
