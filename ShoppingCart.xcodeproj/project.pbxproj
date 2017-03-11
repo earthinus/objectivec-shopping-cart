@@ -25,6 +25,7 @@
 		84B44A861E7259DE00F8CF1C /* Cloth.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A851E7259DE00F8CF1C /* Cloth.m */; };
 		84B44A891E725A9E00F8CF1C /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A881E725A9E00F8CF1C /* Material.m */; };
 		84B44A8F1E73383400F8CF1C /* itemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A8E1E73383400F8CF1C /* itemsViewController.m */; };
+		84B44AC31E7473A600F8CF1C /* homeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44AC21E7473A600F8CF1C /* homeTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		84B44A881E725A9E00F8CF1C /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Material.m; sourceTree = "<group>"; };
 		84B44A8D1E73383400F8CF1C /* itemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemsViewController.h; sourceTree = "<group>"; };
 		84B44A8E1E73383400F8CF1C /* itemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemsViewController.m; sourceTree = "<group>"; };
+		84B44AC11E7473A600F8CF1C /* homeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = homeTableViewCell.h; sourceTree = "<group>"; };
+		84B44AC21E7473A600F8CF1C /* homeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = homeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				840623101E71D8E1001F61BC /* ClothViewController.m */,
 				84B44A8D1E73383400F8CF1C /* itemsViewController.h */,
 				84B44A8E1E73383400F8CF1C /* itemsViewController.m */,
+				84B44AC11E7473A600F8CF1C /* homeTableViewCell.h */,
+				84B44AC21E7473A600F8CF1C /* homeTableViewCell.m */,
 				840622D11E6F9E5A001F61BC /* Supporting Files */,
 			);
 			path = ShoppingCart;
@@ -232,6 +237,7 @@
 				840623111E71D8E1001F61BC /* ClothViewController.m in Sources */,
 				8406230E1E71D82A001F61BC /* DrinkViewController.m in Sources */,
 				84B44A891E725A9E00F8CF1C /* Material.m in Sources */,
+				84B44AC31E7473A600F8CF1C /* homeTableViewCell.m in Sources */,
 				840622D91E6F9E5A001F61BC /* ViewController.m in Sources */,
 				840622D61E6F9E5A001F61BC /* AppDelegate.m in Sources */,
 				840622D31E6F9E5A001F61BC /* main.m in Sources */,
