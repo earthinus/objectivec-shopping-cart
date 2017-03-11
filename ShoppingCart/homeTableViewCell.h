@@ -10,4 +10,8 @@
 
 @interface homeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *homeTVCImageView;
+@property (weak, nonatomic) IBOutlet UILabel *homeTVCLabel;
+@property (weak, nonatomic) IBOutlet UIButton *homeTVCButton;
+
 @end

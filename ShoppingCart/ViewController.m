@@ -15,10 +15,42 @@
     
     self.items = [[NSMutableArray<Product*> alloc] init];
     self.sum = 0;
+    
+    self.homeTableView.delegate = self;
+    self.homeTableView.dataSource = self;
+    
+    self.dataSourceForImage = [@[[UIImage imageNamed:@"icon_food.png"], [UIImage imageNamed:@"icon_drink.png"], [UIImage imageNamed:@"icon_cloth.png"]] mutableCopy];
+    self.dataSourceForLabel = [@[@"Food", @"Drink", @"Cloth"] mutableCopy];
+    //self.dataSourceForButton = [@[] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    homeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"homeTableViewCellID"];
+    
+    if (!cell) {
+        cell = [[homeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"homeTableViewCellID"];
+    }
+    
+    cell.homeTVCImageView.image = [self.dataSourceForImage objectAtIndex:indexPath.row];
+    cell.homeTVCLabel.text = [self.dataSourceForLabel objectAtIndex:indexPath.row];
+    //cell.homeTVCButton.text = [self.dataSourceForButton objectAtIndex:indexPath.row];
+    
+    return cell;
+}
+
+- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView
+ numberOfRowsInSection:(NSInteger)section {
+    return self.dataSourceForImage.count;
 }
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
