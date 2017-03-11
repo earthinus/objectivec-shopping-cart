@@ -31,22 +31,29 @@
         
     } else if ([segue.identifier isEqualToString:@"clothSegue"]) {
         ((ClothViewController*)(segue.destinationViewController)).delegate = self;
+        
+    } else if ([segue.identifier isEqualToString:@"itemsSegue"]) {
+        ((itemsViewController*)(segue.destinationViewController)).delegate = self;
     }
 }
 
-- (void) foodView:(FoodViewController *)foodView item:(Food *)item {
+- (void) foodItem:(Food *)item {
     [self.items addObject:item];
     [self showSumPrice:item];
 }
 
-- (void) drinkView:(DrinkViewController *)drinkView item:(Drink *)item {
+- (void) drinkItem:(Drink *)item {
     [self.items addObject:item];
     [self showSumPrice:item];
 }
 
-- (void) clothView:(ClothViewController *)clothView item:(Cloth *)item {
+- (void) clothItem:(Cloth *)item {
     [self.items addObject:item];
     [self showSumPrice:item];
+}
+
+- (NSMutableArray<Product*>*)productItems {
+    return self.items;
 }
 
 - (void) showSumPrice:(Product *)item {
@@ -54,13 +61,5 @@
     self.priceLabel.text = [@"$" stringByAppendingString:@(self.sum).stringValue];
 }
 
-- (IBAction)showItems:(UIButton *)sender {
-    
-    if ([self.delegate respondsToSelector:@selector(items:)]) {
-        
-        // Delegate array of Product to itemViewController
-        [self.delegate items:self.items];
-    }
-}
 
 @end

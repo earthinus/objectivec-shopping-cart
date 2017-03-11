@@ -10,24 +10,15 @@
 #import "FoodViewController.h"
 #import "DrinkViewController.h"
 #import "ClothViewController.h"
+#import "itemsViewController.h"
 #import "Product.h"
 
-@protocol ItemsDelegate <NSObject>
+@interface ViewController : UIViewController <FoodDelegate, DrinkDelegate, ClothDelegate, ItemDelegate>
 
-@required
-- (void) items:(NSMutableArray<Product*>*)items;
-
-@end
-
-
-@interface ViewController : UIViewController <FoodDelegate, DrinkDelegate, ClothDelegate>
-
-@property (weak, nonatomic) id<ItemsDelegate> delegate;
-@property NSMutableArray<Product*> *items;
+@property (strong, nonatomic) NSMutableArray<Product*> *items;
 @property float sum;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
 
 - (void) showSumPrice:(Product *)item;
-- (IBAction)showItems:(UIButton *)sender;
 
 @end

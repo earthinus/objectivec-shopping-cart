@@ -15,7 +15,7 @@
 
 @optional
 
-- (void) drinkView:(DrinkViewController *)drinkView item:(Drink *)item;
+- (void) drinkItem:(Drink *)item;
 
 @end
 

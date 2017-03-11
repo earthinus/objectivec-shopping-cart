@@ -14,8 +14,7 @@
 @protocol ClothDelegate <NSObject>
 
 @required
-
-- (void) clothView:(ClothViewController *)clothView item:(Cloth *)item;
+- (void) clothItem:(Cloth *)item;
 
 @end
 

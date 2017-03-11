@@ -23,7 +23,7 @@
 
 - (IBAction)submitFoodData:(id)sender {
     
-    if ([self.delegate respondsToSelector:@selector(foodView:item:)]) {
+    if ([self.delegate respondsToSelector:@selector(foodItem:)]) {
         
         // Set values to the object
         self.item = [self.item initWithFoodID:[_foodIDTextField.text intValue]
@@ -34,7 +34,7 @@
                                      foodSize:[_foodSizeTextField.text intValue]
                               foodIngredients:@[@"chicken", @"oil", @"chees"]]; // TODO: split by comma
         
-        [self.delegate foodView:self item:self.item];
+        [self.delegate foodItem:self.item];
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }

@@ -14,7 +14,7 @@
 @protocol FoodDelegate <NSObject>
 
 @required
-- (void) foodView:(FoodViewController *)foodView item:(Food *)item;
+- (void) foodItem:(Food *)item;
 
 @end
 

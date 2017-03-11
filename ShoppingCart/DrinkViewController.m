@@ -23,7 +23,7 @@
 
 - (IBAction)submitDrinkData:(id)sender {
     
-    if ([self.delegate respondsToSelector:@selector(drinkView:item:)]) {
+    if ([self.delegate respondsToSelector:@selector(drinkItem:)]) {
         
         self.item = [self.item initWithDrinkID:[_drinkIDTextField.text intValue]
                                      drinkName:_drinkNameTextField.text
@@ -32,7 +32,7 @@
                                    isDrinkDiet:_drinkIsDrinkDiet.canBecomeFirstResponder
                                      drinkSize:[_drinkSizeTextField.text intValue]];
         
-        [self.delegate drinkView:self item:self.item];
+        [self.delegate drinkItem:self.item];
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }

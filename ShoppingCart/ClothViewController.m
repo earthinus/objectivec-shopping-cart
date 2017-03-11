@@ -23,7 +23,7 @@
 
 - (IBAction)submitClothData:(id)sender {
     
-    if ([self.delegate respondsToSelector:@selector(clothView:item:)]) {
+    if ([self.delegate respondsToSelector:@selector(clothItem:)]) {
         
         self.item = [self.item initWithClothID:[_clothIDTextField.text intValue]
                                      clothName:_clothNameTextField.text
@@ -32,7 +32,7 @@
                                 clothMaterials:@[@"cotton"]];
         //_clothMaterialsTextView.text
         
-        [self.delegate clothView:self item:self.item];
+        [self.delegate clothItem:self.item];
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }

@@ -7,13 +7,20 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "ViewController.h"
 #import "Product.h"
 
-@interface itemsViewController : UIViewController <ItemsDelegate>
+@protocol ItemDelegate <NSObject>
 
-@property (weak, nonatomic) id<ItemsDelegate> delegate;
-@property (weak, nonatomic) IBOutlet UILabel *itemsLabel;
+@required
+- (NSMutableArray<Product*>*) productItems;
+
+@end
+
+
+@interface itemsViewController : UIViewController
+
+@property (weak, nonatomic) id<ItemDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UITextView *itemTextView;
 @property (strong, nonatomic) NSMutableArray<Product*> *items;
 
 @end
