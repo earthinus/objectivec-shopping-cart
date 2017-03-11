@@ -24,7 +24,6 @@
 		84B44A831E7259D200F8CF1C /* Drink.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A821E7259D200F8CF1C /* Drink.m */; };
 		84B44A861E7259DE00F8CF1C /* Cloth.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A851E7259DE00F8CF1C /* Cloth.m */; };
 		84B44A891E725A9E00F8CF1C /* Material.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A881E725A9E00F8CF1C /* Material.m */; };
-		84B44A8C1E725BA200F8CF1C /* ShoppingCart.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A8B1E725BA200F8CF1C /* ShoppingCart.m */; };
 		84B44A8F1E73383400F8CF1C /* itemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B44A8E1E73383400F8CF1C /* itemsViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -58,8 +57,6 @@
 		84B44A851E7259DE00F8CF1C /* Cloth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cloth.m; sourceTree = "<group>"; };
 		84B44A871E725A9E00F8CF1C /* Material.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
 		84B44A881E725A9E00F8CF1C /* Material.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Material.m; sourceTree = "<group>"; };
-		84B44A8A1E725BA200F8CF1C /* ShoppingCart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShoppingCart.h; sourceTree = "<group>"; };
-		84B44A8B1E725BA200F8CF1C /* ShoppingCart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShoppingCart.m; sourceTree = "<group>"; };
 		84B44A8D1E73383400F8CF1C /* itemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = itemsViewController.h; sourceTree = "<group>"; };
 		84B44A8E1E73383400F8CF1C /* itemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = itemsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -95,8 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				840622DA1E6F9E5A001F61BC /* Main.storyboard */,
-				840622D41E6F9E5A001F61BC /* AppDelegate.h */,
-				840622D51E6F9E5A001F61BC /* AppDelegate.m */,
 				840622D71E6F9E5A001F61BC /* ViewController.h */,
 				840622D81E6F9E5A001F61BC /* ViewController.m */,
 				840623061E711A10001F61BC /* FoodViewController.h */,
@@ -105,6 +100,31 @@
 				8406230D1E71D82A001F61BC /* DrinkViewController.m */,
 				8406230F1E71D8E1001F61BC /* ClothViewController.h */,
 				840623101E71D8E1001F61BC /* ClothViewController.m */,
+				84B44A8D1E73383400F8CF1C /* itemsViewController.h */,
+				84B44A8E1E73383400F8CF1C /* itemsViewController.m */,
+				840622D11E6F9E5A001F61BC /* Supporting Files */,
+			);
+			path = ShoppingCart;
+			sourceTree = "<group>";
+		};
+		840622D11E6F9E5A001F61BC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				840622DD1E6F9E5A001F61BC /* Assets.xcassets */,
+				840622E21E6F9E5A001F61BC /* Info.plist */,
+				840622DF1E6F9E5A001F61BC /* LaunchScreen.storyboard */,
+				840622D41E6F9E5A001F61BC /* AppDelegate.h */,
+				840622D51E6F9E5A001F61BC /* AppDelegate.m */,
+				84B44AC01E746CA600F8CF1C /* Images */,
+				84B44ABF1E746C7D00F8CF1C /* Class */,
+				840622D21E6F9E5A001F61BC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84B44ABF1E746C7D00F8CF1C /* Class */ = {
+			isa = PBXGroup;
+			children = (
 				84B44A7E1E7256E300F8CF1C /* Product.h */,
 				84B44A7F1E7256E300F8CF1C /* Product.m */,
 				84B44A7B1E7256AF00F8CF1C /* Food.h */,
@@ -115,27 +135,18 @@
 				84B44A851E7259DE00F8CF1C /* Cloth.m */,
 				84B44A871E725A9E00F8CF1C /* Material.h */,
 				84B44A881E725A9E00F8CF1C /* Material.m */,
-				84B44A8A1E725BA200F8CF1C /* ShoppingCart.h */,
-				84B44A8B1E725BA200F8CF1C /* ShoppingCart.m */,
-				84B44A8D1E73383400F8CF1C /* itemsViewController.h */,
-				84B44A8E1E73383400F8CF1C /* itemsViewController.m */,
-				840622DD1E6F9E5A001F61BC /* Assets.xcassets */,
-				840622DF1E6F9E5A001F61BC /* LaunchScreen.storyboard */,
-				840622E21E6F9E5A001F61BC /* Info.plist */,
-				840622D11E6F9E5A001F61BC /* Supporting Files */,
 			);
-			path = ShoppingCart;
+			name = Class;
 			sourceTree = "<group>";
 		};
-		840622D11E6F9E5A001F61BC /* Supporting Files */ = {
+		84B44AC01E746CA600F8CF1C /* Images */ = {
 			isa = PBXGroup;
 			children = (
 				840622FD1E708BAF001F61BC /* icon_cloth.png */,
 				840622FE1E708BAF001F61BC /* icon_drink.png */,
 				840622FF1E708BAF001F61BC /* icon_food.png */,
-				840622D21E6F9E5A001F61BC /* main.m */,
 			);
-			name = "Supporting Files";
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -221,7 +232,6 @@
 				840623111E71D8E1001F61BC /* ClothViewController.m in Sources */,
 				8406230E1E71D82A001F61BC /* DrinkViewController.m in Sources */,
 				84B44A891E725A9E00F8CF1C /* Material.m in Sources */,
-				84B44A8C1E725BA200F8CF1C /* ShoppingCart.m in Sources */,
 				840622D91E6F9E5A001F61BC /* ViewController.m in Sources */,
 				840622D61E6F9E5A001F61BC /* AppDelegate.m in Sources */,
 				840622D31E6F9E5A001F61BC /* main.m in Sources */,
