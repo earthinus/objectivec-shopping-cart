@@ -8,13 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "FoodViewController.h"
-#import "DrinkViewController.h"
-#import "ClothViewController.h"
 #import "itemsViewController.h"
 #import "Product.h"
 #import "homeTableViewCell.h"
 
-@interface ViewController : UIViewController <FoodDelegate, DrinkDelegate, ClothDelegate, ItemDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <FoodDelegate, ItemDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) NSMutableArray<Product*> *items;
 @property float sum;
@@ -23,6 +21,7 @@
 @property (strong, nonatomic) NSMutableArray<UIImage*> *dataSourceForImage;
 @property (strong, nonatomic) NSMutableArray<NSString*> *dataSourceForLabel;
 @property (strong, nonatomic) NSMutableArray<NSString*> *dataSourceForButton;
+@property(nonatomic) NSInteger indexPathRow;
 
 - (void) showSumPrice:(Product *)item;
 

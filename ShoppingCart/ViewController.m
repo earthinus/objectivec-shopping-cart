@@ -21,7 +21,6 @@
     
     self.dataSourceForImage = [@[[UIImage imageNamed:@"icon_food.png"], [UIImage imageNamed:@"icon_drink.png"], [UIImage imageNamed:@"icon_cloth.png"]] mutableCopy];
     self.dataSourceForLabel = [@[@"Food", @"Drink", @"Cloth"] mutableCopy];
-    //self.dataSourceForButton = [@[] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -46,7 +45,6 @@
     [cell.homeTVCButton addTarget:self action:@selector(onMyButtonTouch:event:)
             forControlEvents:UIControlEventTouchUpInside];
     
-    
     return cell;
 }
 
@@ -58,33 +56,13 @@
     CGPoint point = [touch locationInView:_homeTableView];
     NSIndexPath *indexPath = [_homeTableView indexPathForRowAtPoint:point];
     
-    FoodViewController  *foodVC  = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodViewControllerID"];
-    DrinkViewController *drinkVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DrinkViewControllerID"];
-    ClothViewController *clothVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ClothViewControllerID"];
+    FoodViewController  *inputVC  = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodViewControllerID"];
     
-    foodVC.modalTransitionStyle  = UIModalTransitionStyleCrossDissolve;
-    drinkVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-    clothVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    inputVC.modalTransitionStyle  = UIModalTransitionStyleCrossDissolve;
     
-    switch (indexPath.row) {
-        case 0:
-            foodVC.delegate = self;
-            [self presentViewController:foodVC animated:YES completion:nil];
-            break;
-            
-        case 1:
-            drinkVC.delegate = self;
-            [self presentViewController: drinkVC animated:YES completion: nil];
-            break;
-            
-        case 2:
-            clothVC.delegate = self;
-            [self presentViewController: clothVC animated:YES completion: nil];
-            break;
-            
-        default:
-            break;
-    }
+    inputVC.delegate = self;
+    self.indexPathRow = indexPath.row;
+    [self presentViewController:inputVC animated:YES completion:nil];
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -103,22 +81,16 @@
     }
 }
 
-- (void) foodItem:(Food *)item {
+- (void) foodItem:(Product *)item {
     [self.items addObject:item];
     [self showSumPrice:item];
 }
 
-- (void) drinkItem:(Drink *)item {
-    [self.items addObject:item];
-    [self showSumPrice:item];
+- (NSInteger) indexPathRow {
+    return _indexPathRow;
 }
 
-- (void) clothItem:(Cloth *)item {
-    [self.items addObject:item];
-    [self showSumPrice:item];
-}
-
-- (NSMutableArray<Product*>*)productItems {
+- (NSMutableArray<Product*>*) productItems {
     return self.items;
 }
 

@@ -8,14 +8,18 @@
 
 #import <UIKit/UIKit.h>
 #import "Food.h"
+#import "Drink.h"
+#import "Cloth.h"
 #import "FoodTableViewCell.h"
 
 @class FoodViewController;
 
 @protocol FoodDelegate <NSObject>
 
+- (NSInteger) indexPathRow;
+
 @required
-- (void) foodItem:(Food *)item;
+- (void) foodItem:(Product *)item;
 
 @end
 
@@ -23,9 +27,12 @@
 @interface FoodViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) id<FoodDelegate> delegate;
-@property (strong, nonatomic) Food *item;
 @property (weak, nonatomic) IBOutlet UITableView *foodTableView;
-@property (strong, nonatomic) NSMutableArray<NSString *> *dataSourceForLabel;
-@property (strong, nonatomic) NSMutableArray<NSString *> *dataSourceForTextField;
+@property (strong, nonatomic) NSArray<NSString *> *dataFoodLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataFoodValue;
+@property (strong, nonatomic) NSArray<NSString *> *dataDrinkLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataDrinkValue;
+@property (strong, nonatomic) NSArray<NSString *> *dataClothLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataClothValue;
 
 @end
