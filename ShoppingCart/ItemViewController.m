@@ -49,6 +49,7 @@
             cell = [[FoodItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
         
+        cell.foodImageView.image = [UIImage imageNamed:@"icon_food.png"];
         cell.foodNameLabel.text = @"Checken";
         cell.foodPriceLabel.text = @"$10";
         return cell;
@@ -62,7 +63,8 @@
         if (!cell) {
             cell = [[DrinkItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
-            
+        
+        cell.drinkImageView.image = [UIImage imageNamed:@"icon_drink.png"];
         cell.drinkNameLabel.text = @"Checken";
         cell.drinkPriceLabel.text = @"$10";
         return cell;
@@ -77,6 +79,7 @@
             cell = [[ClothItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
         
+        cell.clothImageView.image = [UIImage imageNamed:@"icon_cloth.png"];
         cell.clothNameLabel.text = @"Checken";
         cell.clothPriceLabel.text = @"$10";
         return cell;
