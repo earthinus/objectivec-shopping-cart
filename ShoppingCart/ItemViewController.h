@@ -11,7 +11,9 @@
 #import "DrinkItemTableViewCell.h"
 #import "ClothItemTableViewCell.h"
 #import "ItemHeaderTableViewCell.h"
-#import "Product.h"
+#import "Food.h"
+#import "Drink.h"
+#import "Cloth.h"
 
 @protocol ItemDelegate <NSObject>
 
