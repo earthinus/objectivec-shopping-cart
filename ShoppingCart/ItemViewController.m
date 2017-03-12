@@ -32,7 +32,36 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
     // TODO: dynamic
-    return 1;
+    return 3;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 43;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
+    return 0;
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    static NSString *cellIdentifier = @"ItemHeaderTableViewCellID";
+    ItemHeaderTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    if (!cell) {
+        [tableView dequeueReusableHeaderFooterViewWithIdentifier:cellIdentifier];
+    }
+    if (section == 0) {
+        cell.headerLabel.text = @"Food";
+    } else if (section == 1) {
+        cell.headerLabel.text = @"Drink";
+    } else {
+        cell.headerLabel.text = @"Cloth";
+    }
+    return cell;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

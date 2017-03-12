@@ -10,6 +10,7 @@
 #import "FoodItemTableViewCell.h"
 #import "DrinkItemTableViewCell.h"
 #import "ClothItemTableViewCell.h"
+#import "ItemHeaderTableViewCell.h"
 #import "Product.h"
 
 @protocol ItemDelegate <NSObject>
