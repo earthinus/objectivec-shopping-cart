@@ -25,12 +25,12 @@
     
     if ([self.delegate respondsToSelector:@selector(drinkItem:)]) {
         
-        self.item = [self.item initWithDrinkID:[_drinkIDTextField.text intValue]
+        self.item = [self.item initWithDrinkID:[_drinkIDTextField.text integerValue]
                                      drinkName:_drinkNameTextField.text
                                     drinkPrice:[_drinkPriceTextField.text floatValue]
                             drinkMadeInCountry:_drinkMadeInCountryTextField.text
                                    isDrinkDiet:_drinkIsDrinkDiet.canBecomeFirstResponder
-                                     drinkSize:[_drinkSizeTextField.text intValue]];
+                                     drinkSize:[_drinkSizeTextField.text integerValue]];
         
         [self.delegate drinkItem:self.item];
         

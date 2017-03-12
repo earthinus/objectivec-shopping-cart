@@ -1,14 +1,14 @@
 //
-//  homeTableViewCell.m
+//  FoodTableViewCell.m
 //  ShoppingCart
 //
 //  Created by 戸田 真紀 on 2017-03-11.
 //  Copyright © 2017 CICCC. All rights reserved.
 //
 
-#import "homeTableViewCell.h"
+#import "FoodTableViewCell.h"
 
-@implementation homeTableViewCell
+@implementation FoodTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

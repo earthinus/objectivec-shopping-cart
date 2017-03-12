@@ -25,7 +25,7 @@
     
     if ([self.delegate respondsToSelector:@selector(clothItem:)]) {
         
-        self.item = [self.item initWithClothID:[_clothIDTextField.text intValue]
+        self.item = [self.item initWithClothID:[_clothIDTextField.text integerValue]
                                      clothName:_clothNameTextField.text
                                     clothPrice:[_clothPriceTextField.text floatValue]
                             clothMadeInCountry:_clothMadeInCountryTextField.text

@@ -10,13 +10,13 @@
 
 @interface Product : UIViewController
 
-@property int productID;
+@property NSInteger productID;
 @property (strong, nonatomic) NSString *productName,
 *productMadeInCountry;
 @property float productPrice;
 
 
-- (id) initWithProductID:(int)productID
+- (id) initWithProductID:(NSInteger)productID
              productName:(NSString*)productName
             productPrice:(float)productPrice
     productMadeInCountry:(NSString*)productMadeInCountry;

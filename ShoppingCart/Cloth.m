@@ -10,7 +10,7 @@
 
 @implementation Cloth
 
-- (id) initWithClothID:(int)clothID
+- (id) initWithClothID:(NSInteger)clothID
              clothName:(NSString*)clothName
             clothPrice:(float)clothPrice
     clothMadeInCountry:(NSString*)clothMadeInCountry

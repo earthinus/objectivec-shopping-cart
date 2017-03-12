@@ -10,7 +10,7 @@
 
 @implementation Product
 
-- (id) initWithProductID:(int)productID
+- (id) initWithProductID:(NSInteger)productID
              productName:(NSString*)productName
             productPrice:(float)productPrice
     productMadeInCountry:(NSString*)productMadeInCountry {

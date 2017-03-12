@@ -33,10 +33,10 @@
     
     static NSString* cellIdentifier = @"homeTableViewCellID";
     
-    homeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    HomeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
-        cell = [[homeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[HomeTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     cell.homeTVCImageView.image = [self.dataSourceForImage objectAtIndex:indexPath.row];

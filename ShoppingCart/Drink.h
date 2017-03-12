@@ -12,13 +12,13 @@
 @interface Drink : Product
 
 @property BOOL isDrinkDiet;
-@property int drinkSize;
+@property NSInteger drinkSize;
 
-- (id) initWithDrinkID:(int)drinkID
+- (id) initWithDrinkID:(NSInteger)drinkID
              drinkName:(NSString*)drinkName
             drinkPrice:(float)drinkPrice
     drinkMadeInCountry:(NSString*)drinkMadeInCountry
            isDrinkDiet:(BOOL)isDrinkDiet
-             drinkSize:(int)drinkSize;
+             drinkSize:(NSInteger)drinkSize;
 
 @end

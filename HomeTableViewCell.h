@@ -1,5 +1,5 @@
 //
-//  homeTableViewCell.h
+//  HomeTableViewCell.h
 //  ShoppingCart
 //
 //  Created by 戸田 真紀 on 2017-03-11.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface homeTableViewCell : UITableViewCell
+@interface HomeTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *homeTVCImageView;
 @property (weak, nonatomic) IBOutlet UILabel *homeTVCLabel;

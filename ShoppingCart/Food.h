@@ -11,12 +11,12 @@
 
 @interface Food : Product
 
-@property int foodCalorie;
-@property int foodSize;
+@property NSInteger foodCalorie;
+@property NSInteger foodSize;
 @property NSArray<NSString *> *foodIngredients;
 
 
-- (id) initWithFoodID:(int)foodID foodName:(NSString*)foodName foodPrice:(float)foodPrice foodMadeInCountry:(NSString*)foodMadeInCountry foodCalorie:(int)foodCalorie foodSize:(int)foodSize foodIngredients:(NSArray<NSString*>*)foodIngredients;
+- (id) initWithFoodID:(NSInteger)foodID foodName:(NSString*)foodName foodPrice:(float)foodPrice foodMadeInCountry:(NSString*)foodMadeInCountry foodCalorie:(NSInteger)foodCalorie foodSize:(NSInteger)foodSize foodIngredients:(NSArray<NSString*>*)foodIngredients;
 
 - (float) price;
 
