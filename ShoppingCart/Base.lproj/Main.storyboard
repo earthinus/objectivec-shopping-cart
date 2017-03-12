@@ -49,7 +49,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-La-dOh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="gzU-La-dOh">
                                 <rect key="frame" x="16" y="88" width="343" height="259"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="1" width="343" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9zO-ec-fMn" id="HNV-zK-gII">
-                                            <rect key="frame" x="0.0" y="0.0" width="343" height="59"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="itf-R8-bm2">
@@ -100,69 +100,18 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rpp-d8-Hpu">
-                                <rect key="frame" x="239" y="455" width="120" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="7Xl-as-tSN"/>
-                                    <constraint firstAttribute="height" constant="36" id="ZsM-s7-Pz1"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="lwl-f1-6Ok" kind="presentation" identifier="foodSegue" id="jpL-yu-l2F"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dGl-7K-0v3">
-                                <rect key="frame" x="239" y="499" width="120" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="2kg-Bb-yru"/>
-                                    <constraint firstAttribute="height" constant="36" id="91C-MO-tiG"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Fq0-Yv-jyJ" kind="presentation" identifier="drinkSegue" id="4Gm-fH-Jfs"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLt-hS-pyN">
-                                <rect key="frame" x="239" y="543" width="120" height="36"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="mi9-6A-8G4"/>
-                                    <constraint firstAttribute="height" constant="36" id="v98-8G-z38"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="g1H-Vg-asZ" kind="presentation" identifier="clothSegue" id="ApZ-M6-ShC"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="eLt-hS-pyN" secondAttribute="trailing" constant="16" id="6sf-9i-4Lg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="5dQ-hH-kwT" secondAttribute="bottom" id="EeI-6S-3AA"/>
-                            <constraint firstItem="dGl-7K-0v3" firstAttribute="top" secondItem="Rpp-d8-Hpu" secondAttribute="bottom" constant="8" id="GGq-h3-urz"/>
                             <constraint firstAttribute="trailing" secondItem="5dQ-hH-kwT" secondAttribute="trailing" id="GzC-1X-W6V"/>
                             <constraint firstItem="5dQ-hH-kwT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="N6h-Rp-sAR"/>
-                            <constraint firstItem="Rpp-d8-Hpu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="435" id="Nl1-An-QOr"/>
                             <constraint firstItem="MBe-eY-nT1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="NqJ-tO-AZE"/>
-                            <constraint firstItem="Rpp-d8-Hpu" firstAttribute="leading" secondItem="dGl-7K-0v3" secondAttribute="leading" id="QYG-9E-bjY"/>
                             <constraint firstItem="0hP-Nm-Pcq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="TdX-JC-MlM"/>
                             <constraint firstItem="5dQ-hH-kwT" firstAttribute="top" secondItem="0hP-Nm-Pcq" secondAttribute="bottom" constant="176" id="VDt-RG-oo8"/>
                             <constraint firstItem="d1M-RT-Wo2" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="W0v-km-EaF"/>
                             <constraint firstItem="MBe-eY-nT1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="WOy-gd-rZt"/>
-                            <constraint firstAttribute="trailing" secondItem="dGl-7K-0v3" secondAttribute="trailing" constant="16" id="Ykm-b8-SSm"/>
                             <constraint firstItem="d1M-RT-Wo2" firstAttribute="leading" secondItem="0hP-Nm-Pcq" secondAttribute="trailing" constant="8" id="Ytk-dW-0aN"/>
-                            <constraint firstItem="eLt-hS-pyN" firstAttribute="top" secondItem="dGl-7K-0v3" secondAttribute="bottom" constant="8" id="hDs-zY-NfO"/>
                             <constraint firstItem="d1M-RT-Wo2" firstAttribute="centerY" secondItem="0hP-Nm-Pcq" secondAttribute="centerY" id="hMC-RA-dHR"/>
                             <constraint firstItem="MBe-eY-nT1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="ky0-JN-Rr6"/>
                             <constraint firstItem="0hP-Nm-Pcq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="2" constant="-587" id="oma-1L-T4Y"/>
@@ -181,7 +130,7 @@
         <!--Food View Controller-->
         <scene sceneID="RNC-fj-D8J">
             <objects>
-                <viewController id="lwl-f1-6Ok" customClass="FoodViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FoodViewControllerID" id="lwl-f1-6Ok" customClass="FoodViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FBL-qC-JxC"/>
                         <viewControllerLayoutGuide type="bottom" id="WjA-Va-gRS"/>
@@ -495,7 +444,7 @@
         <!--Cloth View Controller-->
         <scene sceneID="H5E-g5-Qps">
             <objects>
-                <viewController id="g1H-Vg-asZ" customClass="ClothViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ClothViewControllerID" id="g1H-Vg-asZ" customClass="ClothViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aTx-qY-frN"/>
                         <viewControllerLayoutGuide type="bottom" id="ZOj-Si-GPb"/>
@@ -681,7 +630,7 @@
         <!--Drink View Controller-->
         <scene sceneID="45S-te-YKm">
             <objects>
-                <viewController id="Fq0-Yv-jyJ" customClass="DrinkViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DrinkViewControllerID" id="Fq0-Yv-jyJ" customClass="DrinkViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="P5g-36-7bg"/>
                         <viewControllerLayoutGuide type="bottom" id="mj4-ON-f4e"/>

@@ -58,7 +58,33 @@
     CGPoint point = [touch locationInView:_homeTableView];
     NSIndexPath *indexPath = [_homeTableView indexPathForRowAtPoint:point];
     
-    NSLog(@"%ld\n", (long)indexPath.row);
+    FoodViewController  *foodVC  = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodViewControllerID"];
+    DrinkViewController *drinkVC = [self.storyboard instantiateViewControllerWithIdentifier:@"DrinkViewControllerID"];
+    ClothViewController *clothVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ClothViewControllerID"];
+    
+    foodVC.modalTransitionStyle  = UIModalTransitionStyleCrossDissolve;
+    drinkVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    clothVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+    
+    switch (indexPath.row) {
+        case 0:
+            foodVC.delegate = self;
+            [self presentViewController:foodVC animated:YES completion:nil];
+            break;
+            
+        case 1:
+            drinkVC.delegate = self;
+            [self presentViewController: drinkVC animated:YES completion: nil];
+            break;
+            
+        case 2:
+            clothVC.delegate = self;
+            [self presentViewController: clothVC animated:YES completion: nil];
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -72,16 +98,7 @@
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
-    if ([segue.identifier isEqualToString:@"foodSegue"]) {
-        ((FoodViewController*)(segue.destinationViewController)).delegate = self;
-        
-    } else if ([segue.identifier isEqualToString:@"drinkSegue"]) {
-        ((DrinkViewController*)(segue.destinationViewController)).delegate = self;
-        
-    } else if ([segue.identifier isEqualToString:@"clothSegue"]) {
-        ((ClothViewController*)(segue.destinationViewController)).delegate = self;
-        
-    } else if ([segue.identifier isEqualToString:@"itemsSegue"]) {
+    if ([segue.identifier isEqualToString:@"itemsSegue"]) {
         ((itemsViewController*)(segue.destinationViewController)).delegate = self;
     }
 }
@@ -109,6 +126,5 @@
     self.sum += [item price];
     self.priceLabel.text = [@"$" stringByAppendingString:@(self.sum).stringValue];
 }
-
 
 @end
