@@ -1,27 +1,33 @@
 //
-//  FoodViewController.m
+//  InputViewController.m
 //  ShoppingCart
 //
-//  Created by 戸田 真紀 on 2017-03-08.
+//  Created by 戸田 真紀 on 2017-03-12.
 //  Copyright © 2017 CICCC. All rights reserved.
 //
 
-#import "FoodViewController.h"
+#import "InputViewController.h"
 
-@interface FoodViewController ()
+@interface InputViewController ()
 
-@property (strong, nonatomic) NSArray<NSArray *> *dataSource;
 @property (strong, nonatomic) Product *item;
+@property (strong, nonatomic) NSArray<NSArray *> *dataSource;
+@property (strong, nonatomic) NSArray<NSString *> *dataFoodLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataFoodValue;
+@property (strong, nonatomic) NSArray<NSString *> *dataDrinkLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataDrinkValue;
+@property (strong, nonatomic) NSArray<NSString *> *dataClothLabel;
+@property (strong, nonatomic) NSArray<NSString *> *dataClothValue;
 @property NSInteger index;
 
 @end
 
-@implementation FoodViewController
+@implementation InputViewController
 
 - (void)viewWillAppear:(BOOL)animated {
     self.index = [self.delegate indexPathRow];
-    self.foodTableView.delegate = self;
-    self.foodTableView.dataSource = self;
+    self.inputTableView.delegate = self;
+    self.inputTableView.dataSource = self;
     
     self.dataFoodLabel = [@[@"Food ID", @"Food name", @"Food Price", @"Food made in country", @"Food calorie", @"Food size", @"Food ingredients"] mutableCopy];
     self.dataFoodValue = [@[@"100", @"Chicken", @"8", @"Canada", @"350", @"4", @"chicken, oil, chees"] mutableCopy];
@@ -39,6 +45,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    switch (_index) {
+        case 0:
+            self.headerLabel.text = @"Food information";
+            break;
+            
+        case 1:
+            self.headerLabel.text = @"Drink information";
+            break;
+            
+        case 2:
+            self.headerLabel.text = @"Cloth information";
+            break;
+            
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -56,34 +79,34 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString* cellIdentifier = @"foodTableViewCellID";
+    static NSString* cellIdentifier = @"inputTableViewCellID";
     
-    FoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    InputTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     if (!cell) {
-        cell = [[FoodTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell = [[InputTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
     // Set labels and default values of each textfield
-    cell.foodTVCLabel.text = [self.dataSource[self.index][0] objectAtIndex:indexPath.row];
-    cell.foodTVCTextField.text = [self.dataSource[self.index][1]  objectAtIndex:indexPath.row];
+    cell.inputTVCLabel.text = [self.dataSource[self.index][0] objectAtIndex:indexPath.row];
+    cell.inputTVCTextField.text = [self.dataSource[self.index][1]  objectAtIndex:indexPath.row];
     return cell;
 }
 
-- (IBAction)submitFoodData:(id)sender {
+- (IBAction)submitData:(id)sender {
     
-    if ([self.delegate respondsToSelector:@selector(foodItem:)]) {
+    if ([self.delegate respondsToSelector:@selector(item:)]) {
         
         // Get values from each textfield
         NSMutableDictionary *dict = [NSMutableDictionary dictionary];
         NSIndexPath *indexPath;
-        FoodTableViewCell *cell;
+        InputTableViewCell *cell;
         NSArray *arrLable = self.dataSource[self.index][0];
         
         for (int i = 0; i < arrLable.count; i++) {
             indexPath = [NSIndexPath indexPathForRow:i inSection:0];
-            cell = [_foodTableView cellForRowAtIndexPath:indexPath];
-            [dict setObject:cell.foodTVCTextField.text forKey:_dataFoodLabel[i]];
+            cell = [_inputTableView cellForRowAtIndexPath:indexPath];
+            [dict setObject:cell.inputTVCTextField.text forKey:_dataFoodLabel[i]];
         }
         
         
@@ -120,7 +143,7 @@
                 break;
         }
         
-        [self.delegate foodItem:self.item];
+        [self.delegate item:self.item];
         
         [self dismissViewControllerAnimated:YES completion:nil];
     }

@@ -127,10 +127,10 @@
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="138.0809595202399"/>
         </scene>
-        <!--Food View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="RNC-fj-D8J">
             <objects>
-                <viewController storyboardIdentifier="FoodViewControllerID" id="lwl-f1-6Ok" customClass="FoodViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InputViewControllerID" id="lwl-f1-6Ok" customClass="InputViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="FBL-qC-JxC"/>
                         <viewControllerLayoutGuide type="bottom" id="WjA-Va-gRS"/>
@@ -152,7 +152,7 @@
                                     <action selector="goBack:" destination="lwl-f1-6Ok" eventType="touchUpInside" id="jms-ys-vOS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-gb-ByU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-gb-ByU">
                                 <rect key="frame" x="16" y="28" width="343" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="JJw-7R-4iq"/>
@@ -169,14 +169,14 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="submitFoodData:" destination="lwl-f1-6Ok" eventType="touchUpInside" id="p5G-XQ-fn6"/>
+                                    <action selector="submitData:" destination="lwl-f1-6Ok" eventType="touchUpInside" id="gbN-e4-GUB"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="YQ8-90-0Vt">
                                 <rect key="frame" x="16" y="65" width="343" height="538"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="foodTableViewCellID" rowHeight="70" id="BvV-Ui-9Jk" customClass="FoodTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="inputTableViewCellID" rowHeight="70" id="BvV-Ui-9Jk" customClass="InputTableViewCell">
                                         <rect key="frame" x="0.0" y="1" width="343" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BvV-Ui-9Jk" id="NEh-pt-AXv">
@@ -209,8 +209,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="foodTVCLabel" destination="fBb-bS-lLj" id="3Xp-LB-qqc"/>
-                                            <outlet property="foodTVCTextField" destination="dy4-UM-k5o" id="TBM-bG-F73"/>
+                                            <outlet property="inputTVCLabel" destination="fBb-bS-lLj" id="zTe-G0-Jsi"/>
+                                            <outlet property="inputTVCTextField" destination="dy4-UM-k5o" id="izR-VD-CTw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -240,7 +240,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="foodTableView" destination="YQ8-90-0Vt" id="FkE-qo-12q"/>
+                        <outlet property="headerLabel" destination="A1y-gb-ByU" id="1ZJ-De-W5Q"/>
+                        <outlet property="inputTableView" destination="YQ8-90-0Vt" id="taH-ZX-UnR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q9I-uJ-8Yg" userLabel="First Responder" sceneMemberID="firstResponder"/>

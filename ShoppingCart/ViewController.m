@@ -56,9 +56,9 @@
     CGPoint point = [touch locationInView:_homeTableView];
     NSIndexPath *indexPath = [_homeTableView indexPathForRowAtPoint:point];
     
-    FoodViewController  *inputVC  = [self.storyboard instantiateViewControllerWithIdentifier:@"FoodViewControllerID"];
+    InputViewController *inputVC = [self.storyboard instantiateViewControllerWithIdentifier:@"InputViewControllerID"];
     
-    inputVC.modalTransitionStyle  = UIModalTransitionStyleCrossDissolve;
+    inputVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
     
     inputVC.delegate = self;
     self.indexPathRow = indexPath.row;
@@ -81,7 +81,7 @@
     }
 }
 
-- (void) foodItem:(Product *)item {
+- (void) item:(Product *)item {
     [self.items addObject:item];
     [self showSumPrice:item];
 }

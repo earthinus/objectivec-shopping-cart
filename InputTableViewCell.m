@@ -1,14 +1,14 @@
 //
-//  FoodTableViewCell.m
+//  InputTableViewCell.m
 //  ShoppingCart
 //
-//  Created by 戸田 真紀 on 2017-03-11.
+//  Created by 戸田 真紀 on 2017-03-12.
 //  Copyright © 2017 CICCC. All rights reserved.
 //
 
-#import "FoodTableViewCell.h"
+#import "InputTableViewCell.h"
 
-@implementation FoodTableViewCell
+@implementation InputTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

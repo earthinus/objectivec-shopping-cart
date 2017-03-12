@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "FoodViewController.h"
-#import "itemsViewController.h"
 #import "Product.h"
-#import "homeTableViewCell.h"
+#import "InputViewController.h"
+#import "itemsViewController.h"
+#import "HomeTableViewCell.h"
 
-@interface ViewController : UIViewController <FoodDelegate, ItemDelegate, UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, InputDelegate, ItemDelegate>
 
 @property (strong, nonatomic) NSMutableArray<Product*> *items;
 @property float sum;
