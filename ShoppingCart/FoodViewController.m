@@ -19,7 +19,8 @@
     self.foodTableView.delegate = self;
     self.foodTableView.dataSource = self;
     
-    self.dataSourceForLabel = [@[@"Food ID", @"Food name", @"Food Price", @"Food made in country", @"Food calorie", @"Food size", @"Food ingredients",] mutableCopy];
+    self.dataSourceForLabel = [@[@"Food ID", @"Food name", @"Food Price", @"Food made in country", @"Food calorie", @"Food size", @"Food ingredients"] mutableCopy];
+    self.dataSourceForTextField = [@[@"100", @"Chicken", @"8", @"Canada", @"350", @"4", @"chicken, oil, chees"] mutableCopy];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,32 +39,30 @@
     
     static NSString* cellIdentifier = @"foodTableViewCellID";
     
-    self.cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    FoodTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
-    if (!self.cell) {
-        self.cell = [[FoodTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+    if (!cell) {
+        cell = [[FoodTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
     
-    self.cell.foodTVCLabel.text = [self.dataSourceForLabel objectAtIndex:indexPath.row];
-    return self.cell;
+    // Set labels and default values of each textfield
+    cell.foodTVCLabel.text = [self.dataSourceForLabel objectAtIndex:indexPath.row];
+    cell.foodTVCTextField.text = [self.dataSourceForTextField objectAtIndex:indexPath.row];
+    return cell;
 }
 
 - (IBAction)submitFoodData:(id)sender {
     
     if ([self.delegate respondsToSelector:@selector(foodItem:)]) {
         
-        // TODO: Get values from each textfield
-        
+        // Get values from each textfield
         NSMutableDictionary *foodDict = [NSMutableDictionary dictionary];
         NSIndexPath *indexPath;
         FoodTableViewCell *cell;
         
         for (int i = 0; i < self.dataSourceForLabel.count; i++) {
-            
             indexPath = [NSIndexPath indexPathForRow:i inSection:0];
             cell = [_foodTableView cellForRowAtIndexPath:indexPath];
-            NSLog(@"%@", cell.foodTVCTextField.text); // debug
-            
             [foodDict setObject:cell.foodTVCTextField.text forKey:_dataSourceForLabel[i]];
         }
         

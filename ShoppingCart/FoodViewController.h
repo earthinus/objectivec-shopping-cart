@@ -26,13 +26,6 @@
 @property (strong, nonatomic) Food *item;
 @property (weak, nonatomic) IBOutlet UITableView *foodTableView;
 @property (strong, nonatomic) NSMutableArray<NSString *> *dataSourceForLabel;
-@property (strong, nonatomic) FoodTableViewCell *cell;
-//@property (weak, nonatomic) IBOutlet UITextField *foodIDTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodNameTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodPriceTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodMadeInCountryTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodCalorieTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodSizeTextField;
-//@property (weak, nonatomic) IBOutlet UITextField *foodIngredientsTextField;
+@property (strong, nonatomic) NSMutableArray<NSString *> *dataSourceForTextField;
 
 @end
