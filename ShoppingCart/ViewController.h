@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Product.h"
 #import "InputViewController.h"
-#import "itemsViewController.h"
+#import "ItemViewController.h"
 #import "HomeTableViewCell.h"
 
 @interface ViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, InputDelegate, ItemDelegate>

@@ -77,7 +77,7 @@
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([segue.identifier isEqualToString:@"itemsSegue"]) {
-        ((itemsViewController*)(segue.destinationViewController)).delegate = self;
+        ((ItemViewController*)(segue.destinationViewController)).delegate = self;
     }
 }
 
