@@ -109,7 +109,7 @@
             cell = [[FoodItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
         
-        cell.foodImageView.image = [UIImage imageNamed:@"icon_food.png"];
+        cell.foodImageView.image = [UIImage imageNamed:@"icon_food"];
         cell.foodNameLabel.text = _foodItems[indexPath.row].productName;
         cell.foodSumPriceLabel.text = [NSString stringWithFormat:@"$%.2f", _foodItems[indexPath.row].price];
         cell.foodPriceLabel.text = [NSString stringWithFormat:@"$%.2f", _foodItems[indexPath.row].productPrice];
@@ -124,7 +124,7 @@
             cell = [[DrinkItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
         
-        cell.drinkImageView.image = [UIImage imageNamed:@"icon_drink.png"];
+        cell.drinkImageView.image = [UIImage imageNamed:@"icon_drink"];
         cell.drinkNameLabel.text = _drinkItems[indexPath.row].productName;
         cell.drinkPriceLabel.text = [NSString stringWithFormat:@"$%.2f", _drinkItems[indexPath.row].productPrice];
         cell.drinkSizeLabel.text = [NSString stringWithFormat:@"size: %ld", _drinkItems[indexPath.row].drinkSize];
@@ -138,7 +138,7 @@
             cell = [[ClothItemTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifer];
         }
         
-        cell.clothImageView.image = [UIImage imageNamed:@"icon_cloth.png"];
+        cell.clothImageView.image = [UIImage imageNamed:@"icon_cloth"];
         cell.clothNameLabel.text = _clothItems[indexPath.row].productName;
         cell.clothPriceLabel.text = [NSString stringWithFormat:@"$%.2f", _clothItems[indexPath.row].productPrice];
         return cell;

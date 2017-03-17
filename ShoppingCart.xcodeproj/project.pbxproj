@@ -13,9 +13,6 @@
 		840622DC1E6F9E5A001F61BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840622DA1E6F9E5A001F61BC /* Main.storyboard */; };
 		840622DE1E6F9E5A001F61BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 840622DD1E6F9E5A001F61BC /* Assets.xcassets */; };
 		840622E11E6F9E5A001F61BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840622DF1E6F9E5A001F61BC /* LaunchScreen.storyboard */; };
-		840623001E708BAF001F61BC /* icon_cloth.png in Resources */ = {isa = PBXBuildFile; fileRef = 840622FD1E708BAF001F61BC /* icon_cloth.png */; };
-		840623011E708BAF001F61BC /* icon_drink.png in Resources */ = {isa = PBXBuildFile; fileRef = 840622FE1E708BAF001F61BC /* icon_drink.png */; };
-		840623021E708BAF001F61BC /* icon_food.png in Resources */ = {isa = PBXBuildFile; fileRef = 840622FF1E708BAF001F61BC /* icon_food.png */; };
 		841F10D21E75342500D6EB0E /* HomeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F10D11E75342500D6EB0E /* HomeTableViewCell.m */; };
 		841F10D81E75582800D6EB0E /* InputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F10D71E75582800D6EB0E /* InputViewController.m */; };
 		841F10DE1E755A5E00D6EB0E /* InputTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 841F10DD1E755A5E00D6EB0E /* InputTableViewCell.m */; };
@@ -42,9 +39,6 @@
 		840622DD1E6F9E5A001F61BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		840622E01E6F9E5A001F61BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		840622E21E6F9E5A001F61BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		840622FD1E708BAF001F61BC /* icon_cloth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_cloth.png; sourceTree = "<group>"; };
-		840622FE1E708BAF001F61BC /* icon_drink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_drink.png; sourceTree = "<group>"; };
-		840622FF1E708BAF001F61BC /* icon_food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_food.png; sourceTree = "<group>"; };
 		841F10D01E75342500D6EB0E /* HomeTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeTableViewCell.h; path = ../HomeTableViewCell.h; sourceTree = "<group>"; };
 		841F10D11E75342500D6EB0E /* HomeTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeTableViewCell.m; path = ../HomeTableViewCell.m; sourceTree = "<group>"; };
 		841F10D61E75582800D6EB0E /* InputViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputViewController.h; sourceTree = "<group>"; };
@@ -135,7 +129,6 @@
 				840622DF1E6F9E5A001F61BC /* LaunchScreen.storyboard */,
 				840622D41E6F9E5A001F61BC /* AppDelegate.h */,
 				840622D51E6F9E5A001F61BC /* AppDelegate.m */,
-				84B44AC01E746CA600F8CF1C /* Images */,
 				84B44ABF1E746C7D00F8CF1C /* Class */,
 				840622D21E6F9E5A001F61BC /* main.m */,
 			);
@@ -157,16 +150,6 @@
 				84B44A881E725A9E00F8CF1C /* Material.m */,
 			);
 			name = Class;
-			sourceTree = "<group>";
-		};
-		84B44AC01E746CA600F8CF1C /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				840622FD1E708BAF001F61BC /* icon_cloth.png */,
-				840622FE1E708BAF001F61BC /* icon_drink.png */,
-				840622FF1E708BAF001F61BC /* icon_food.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,12 +210,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				840623011E708BAF001F61BC /* icon_drink.png in Resources */,
 				840622E11E6F9E5A001F61BC /* LaunchScreen.storyboard in Resources */,
 				840622DE1E6F9E5A001F61BC /* Assets.xcassets in Resources */,
 				840622DC1E6F9E5A001F61BC /* Main.storyboard in Resources */,
-				840623021E708BAF001F61BC /* icon_food.png in Resources */,
-				840623001E708BAF001F61BC /* icon_cloth.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

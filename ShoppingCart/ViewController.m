@@ -19,7 +19,7 @@
     self.homeTableView.delegate = self;
     self.homeTableView.dataSource = self;
     
-    self.dataSourceForImage = [@[[UIImage imageNamed:@"icon_food.png"], [UIImage imageNamed:@"icon_drink.png"], [UIImage imageNamed:@"icon_cloth.png"]] mutableCopy];
+    self.dataSourceForImage = [@[[UIImage imageNamed:@"icon_food"], [UIImage imageNamed:@"icon_drink"], [UIImage imageNamed:@"icon_cloth"]] mutableCopy];
     self.dataSourceForLabel = [@[@"Food", @"Drink", @"Cloth"] mutableCopy];
 }
 
